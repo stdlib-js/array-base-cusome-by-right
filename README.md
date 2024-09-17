@@ -35,43 +35,37 @@ limitations under the License.
 
 > Cumulatively test whether at least `n` elements in a provided array pass a test implemented by a predicate function, while iterating from right-to-left.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-base-cusome-by-right
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-cusomeByRight = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-cusome-by-right@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var cusomeByRight = require( 'path/to/vendor/umd/array-base-cusome-by-right/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-cusome-by-right@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.cusomeByRight;
-})();
-</script>
+var cusomeByRight = require( '@stdlib/array-base-cusome-by-right' );
 ```
 
 #### cusomeByRight( x, n, predicate\[, thisArg ] )
 
-Cumulatively test whether at least `n` elements in a provided array pass a test implemented by a `predicate` function, while iterating from right-to-left.
+Cumulatively tests whether at least `n` elements in a provided array pass a test implemented by a `predicate` function, while iterating from right-to-left.
 
 ```javascript
 function fcn( value ) {
@@ -113,7 +107,7 @@ var count = context.count;
 
 #### cusomeByRight.assign( x, n, out, stride, offset, predicate\[, thisArg ] )
 
-Cumulatively test whether at least `n` elements in a provided array pass a test implemented by a `predicate` function, while iterating from right-to-left and assign the results to the elements in the output array.
+Cumulatively tests whether at least `n` elements in a provided array pass a test implemented by a `predicate` function, while iterating from right-to-left and assign the results to the elements in the output array.
 
 ```javascript
 function fcn( v ) {
@@ -146,14 +140,9 @@ var bool = ( out === y );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-bernoulli@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-cusome-by-right@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var bernoulli = require( '@stdlib/random-array-bernoulli' );
+var cusomeByRight = require( '@stdlib/array-base-cusome-by-right' );
 
 function fcn( value ) {
     return ( value > 0 );
@@ -169,11 +158,6 @@ var n = 2;
 // Cumulatively test whether at least `n` array elements pass a test, while iterating from right-to-left:
 var out = cusomeByRight( x, n, fcn );
 console.log( out );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
