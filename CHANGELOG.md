@@ -32,6 +32,8 @@
 
 <details>
 
+-   [`f387603`](https://github.com/stdlib-js/stdlib/commit/f387603e739f88a38af3263ce6ff675ad903ee8c) - **docs:** consistently use declarative instead of imperative sentences outside of intros _(by Philipp Burckhardt)_
+-   [`31fd427`](https://github.com/stdlib-js/stdlib/commit/31fd42744ec5d7073041f97c6f72350b8005c0fc) - **style:** remove unwanted empty lines _(by Philipp Burckhardt)_
 -   [`16bb447`](https://github.com/stdlib-js/stdlib/commit/16bb44733defec3009d7c49cbd8cb6eaaaa60ad2) - **fix:** update TypeScript function signature and documentation _(by Philipp Burckhardt)_
 -   [`0bb460f`](https://github.com/stdlib-js/stdlib/commit/0bb460f9675f693bd4eb5826888e493cae8757fc) - **feat:** add `array/base/cusome-by-right` _(by HarshaNP, Philipp Burckhardt)_
 
